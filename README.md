@@ -1,4 +1,4 @@
-# NFC Passport Reader for React Native
+# NFC Passport Reader for React Native (Fork)
 
 This React Native plugin enables the reading of NFC-enabled passports using native device capabilities. It provides a user-friendly interface for initiating and handling NFC operations, including reading passport data, checking NFC support, and managing NFC settings.
 
@@ -17,11 +17,11 @@ To use the NFC Passport Reader in your React Native project, follow these steps:
 
 1. **Install the Plugin**:
    ```sh
-   npm install react-native-nfc-passport-reader
+   npm install react-native-nfc-passport-reader-v2
    ```
 2. **Link Native Modules (if required for versions below React Native 0.60)**:
    ```sh
-   npx react-native link react-native-nfc-passport-reader
+   npx react-native link react-native-nfc-passport-reader-v2
    ```
 3. **iOS Additional Setup**:
    - Modify your Info.plist to include necessary NFC usage descriptions.
