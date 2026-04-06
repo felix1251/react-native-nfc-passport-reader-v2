@@ -14,7 +14,6 @@ import org.jmrtd.lds.icao.DG1File
 import org.jmrtd.lds.icao.DG2File
 import org.jmrtd.lds.iso19794.FaceImageInfo
 import org.jmrtd.lds.icao.DG7File
-import org.jmrtd.lds.iso19794.SignatureImageInfo
 
 class NfcPassportReader(context: Context) {
   private val bitmapUtil = BitmapUtil(context)
