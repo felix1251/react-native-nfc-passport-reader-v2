@@ -55,7 +55,7 @@ class NfcPassportReader: NSObject {
       var tags: [DataGroupId] = [.COM, .DG1, .DG11]
 
       if includeImages ?? false {
-        tags += [.DG2]
+        tags.append(.DG2)
       }
 
       let finalTags = tags  // Create immutable copy
@@ -101,7 +101,7 @@ class NfcPassportReader: NSObject {
             if let passportImage = passport.passportImage,
               let imageData = passportImage.jpegData(compressionQuality: 0.8)
             {
-              result["originalFacePhoto"] = imageData.base64EncodedString()
+              result["photo"] = imageData.base64EncodedString()
             }
 
             // if let signatureImage = passport.signatureImage,
