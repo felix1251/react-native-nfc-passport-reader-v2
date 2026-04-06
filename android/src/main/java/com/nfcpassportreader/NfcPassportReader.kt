@@ -83,16 +83,16 @@ class NfcPassportReader(context: Context) {
       nfcResult.lastName = surname
     }
 
-    if(!dg11File.placeOfBirth.isNullOrEmpty()){
+    if (!dg11File.placeOfBirth.isNullOrEmpty()) {
       nfcResult.placeOfBirth = dg11File.placeOfBirth.joinToString(separator = " ")
     }
 
-    if(!dg11File.fullDateOfBirth.isNullOrEmpty()){
+    if (!dg11File.fullDateOfBirth.isNullOrEmpty()) {
       nfcResult.birthDate = dateUtil.convertFromMrzDate(dg11File.fullDateOfBirth)
     }
 
     mrzInfo.let {
-      if(!it.dateOfExpiry.isNullOrEmpty()){
+      if (!it.dateOfExpiry.isNullOrEmpty()) {
         nfcResult.expiryDate = dateUtil.convertFromMrzDate(it.dateOfExpiry)
       }
 
