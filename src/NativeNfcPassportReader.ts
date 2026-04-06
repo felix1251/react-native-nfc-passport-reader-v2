@@ -21,7 +21,7 @@ export interface Spec extends TurboModule {
     lastName: string;
     mrz: string;
     nationality: string;
-    originalFacePhoto?: string;
+    photo?: string; // base64
     // signaturePhoto?: string;
   }>;
   stopReading(): void;
