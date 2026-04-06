@@ -12,6 +12,7 @@ export interface Spec extends TurboModule {
   }): Promise<{
     birthDate: string;
     placeOfBirth?: string;
+    issuingAuthority?: string;
     documentNo: string;
     expiryDate: string;
     firstName: string;

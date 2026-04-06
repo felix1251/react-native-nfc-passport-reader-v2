@@ -28,6 +28,7 @@ export type StartReadingParams = {
 export type NfcResult = {
   birthDate: string;
   placeOfBirth?: string;
+  issuingAuthority?: string;
   documentNo: string;
   expiryDate: string;
   firstName: string;
