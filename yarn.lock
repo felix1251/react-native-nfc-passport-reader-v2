@@ -10842,9 +10842,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-nfc-passport-reader@workspace:.":
+"react-native-nfc-passport-reader-v2@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-nfc-passport-reader@workspace:."
+  resolution: "react-native-nfc-passport-reader-v2@workspace:."
   dependencies:
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0

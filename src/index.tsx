@@ -37,6 +37,7 @@ export type NfcResult = {
   mrz: string;
   nationality: string;
   originalFacePhoto?: string; // base64
+  signaturePhoto?: string; // base64
 };
 export default class NfcPassportReader {
   static startReading(params: StartReadingParams): Promise<NfcResult> {
