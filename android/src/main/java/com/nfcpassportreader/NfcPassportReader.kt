@@ -14,7 +14,6 @@ import org.jmrtd.lds.icao.DG1File
 import org.jmrtd.lds.icao.DG2File
 import org.jmrtd.lds.iso19794.FaceImageInfo
 import org.jmrtd.lds.icao.DG7File
-import org.jmrtd.lds.iso19794.SignatureImageInfo
 
 class NfcPassportReader(context: Context) {
   private val bitmapUtil = BitmapUtil(context)
@@ -120,18 +119,12 @@ class NfcPassportReader(context: Context) {
 
       val dg7In = service.getInputStream(PassportService.EF_DG7)
       val dg7File = DG7File(dg7In)
+      val images = dg7File.images
 
-      val signatureInfos = dg7File.signatureInfos
-      val allSignatureImageInfos: MutableList<SignatureImageInfo> = ArrayList()
-
-      for (sigInfo in signatureInfos) {
-        allSignatureImageInfos.addAll(sigInfo.signatureImageInfos)
-      }
-
-      if (allSignatureImageInfos.isNotEmpty()) {
-        val signatureImageInfo = allSignatureImageInfos.iterator().next()
-        val signatureImage = bitmapUtil.getImage(signatureImageInfo)
-        nfcResult.signaturePhoto = signatureImage
+      if (images.isNotEmpty()) {
+        val sigImageInfo = images.iterator().next()
+        val image = bitmapUtil.getImage(sigImageInfo)
+        nfcResult.originalFacePhoto = image
       }
     }
 
