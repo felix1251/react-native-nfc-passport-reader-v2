@@ -1,11 +1,15 @@
 import { DeviceEventEmitter, Platform } from 'react-native';
-import NativeNfcPassportReader from './NativeNfcPassportReader';
+import NativeNfcPassportReader, {
+  type NfcResult,
+  type StartReadingParams,
+} from './NativeNfcPassportReader';
 
 const LINKING_ERROR =
-  `The package 'react-native-nfc-passport-reader' doesn't seem to be linked. Make sure: \n\n` +
+  `The package 'react-native-nfc-passport-reader-v2' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
+
 const NfcPassportReaderNativeModule = NativeNfcPassportReader
   ? NativeNfcPassportReader
   : new Proxy({} as any, {
@@ -13,33 +17,12 @@ const NfcPassportReaderNativeModule = NativeNfcPassportReader
         throw new Error(LINKING_ERROR);
       },
     });
+
 enum NfcPassportReaderEvent {
   TAG_DISCOVERED = 'onTagDiscovered',
   NFC_STATE_CHANGED = 'onNfcStateChanged',
 }
-export type StartReadingParams = {
-  bacKey: {
-    documentNo: string;
-    expiryDate: string;
-    birthDate: string;
-  };
-  includeImages?: boolean; // default: false
-};
-export type NfcResult = {
-  birthDate: string;
-  placeOfBirth?: string;
-  issuingAuthority: string;
-  documentNo: string;
-  expiryDate: string;
-  firstName: string;
-  gender: string;
-  identityNo?: string;
-  lastName: string;
-  mrz: string;
-  nationality: string;
-  facePhoto?: string; // base64
-  signaturePhoto?: string; // base64
-};
+
 export default class NfcPassportReader {
   static startReading(params: StartReadingParams): Promise<NfcResult> {
     return NfcPassportReaderNativeModule.startReading(params);
@@ -97,3 +80,5 @@ export default class NfcPassportReader {
     }
   }
 }
+
+export type { NfcResult, StartReadingParams };
