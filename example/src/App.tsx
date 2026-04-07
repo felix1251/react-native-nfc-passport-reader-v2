@@ -8,9 +8,7 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from 'react-native';
-import NfcPassportReader, {
-  type NfcResult,
-} from 'react-native-nfc-passport-reader';
+import NfcPassportReader from 'react-native-nfc-passport-reader';
 
 export default function App() {
   const [result, setResult] = React.useState<NfcResult>();
