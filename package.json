@@ -106,8 +106,7 @@
     },
     "github": {
       "release": true,
-      "releaseName": "v${version}",
-      "releaseNotes": "See ${name} on npm https://npmjs.com/{name}/v/${version}"
+      "releaseNotes": "### [📦 npm package](https://npmjs.com{version})\n\n${changelog}"
     },
     "plugins": {
       "@release-it/conventional-changelog": {
