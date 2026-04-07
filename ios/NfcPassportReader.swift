@@ -99,15 +99,15 @@ class NfcPassportReader: NSObject {
 
           if includeImages ?? false {
             if let passportImage = passport.passportImage,
-              let imageData = passportImage.jpegData(compressionQuality: 0.8)
+              let faceImageData = passportImage.jpegData(compressionQuality: 0.8)
             {
-              result["facePhoto"] = imageData.base64EncodedString()
+              result["facePhoto"] = faceImageData.base64EncodedString()
             }
 
             if let signatureImage = passport.signatureImage,
-              let imageData = signatureImage.jpegData(compressionQuality: 0.8)
+              let sigImageData = signatureImage.jpegData(compressionQuality: 0.8)
             {
-              result["signaturePhoto"] = imageData.base64EncodedString()
+              result["signaturePhoto"] = sigImageData.base64EncodedString()
             }
           }
 
