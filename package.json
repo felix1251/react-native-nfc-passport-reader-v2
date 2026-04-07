@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felix1251/react-native-nfc-passport-reader.git"
+    "url": "git+https://github.com/felix1251/react-native-nfc-passport-reader-v2.git"
   },
   "author": "Felix Abacajen <felixabacajen17@gmailcom> (https://github.com/felix1251)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/felix1251/react-native-nfc-passport-reader/issues"
+    "url": "https://github.com/felix1251/react-native-nfc-passport-reader-v2/issues"
   },
-  "homepage": "https://github.com/felix1251/react-native-nfc-passport-reader#readme",
+  "homepage": "https://github.com/felix1251/react-native-nfc-passport-reader-v2#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
