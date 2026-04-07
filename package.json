@@ -1,6 +1,6 @@
 {
   "name": "react-native-nfc-passport-reader-v2",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Reads passports and ID cards using its the device NFC. (Fork)",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
