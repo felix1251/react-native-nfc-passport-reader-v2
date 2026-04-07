@@ -24,6 +24,12 @@ export type NfcResult = {
   nationality: string;
   facePhoto?: string; // base64
   signaturePhoto?: string; // base64
+  documentType: string;
+  documentSubType?: string;
+  ldsVersion: string;
+  // verifications
+  isChipAuthentic: boolean;
+  isDocumentAuthentic: boolean;
 };
 
 export interface Spec extends TurboModule {
