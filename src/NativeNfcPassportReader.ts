@@ -21,8 +21,8 @@ export interface Spec extends TurboModule {
     lastName: string;
     mrz: string;
     nationality: string;
-    photo?: string; // base64
-    // signaturePhoto?: string;
+    facePhoto?: string; // base64
+    signaturePhoto?: string; // base64
   }>;
   stopReading(): void;
   isNfcEnabled(): Promise<boolean>;
