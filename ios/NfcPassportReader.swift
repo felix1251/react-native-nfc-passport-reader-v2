@@ -95,6 +95,11 @@ class NfcPassportReader: NSObject {
             "lastName": passport.lastName,
             "mrz": passport.passportMRZ,
             "nationality": passport.nationality,
+            "documentType": passport.documentType,
+            "ldsVersion": passport.LDSVersion,
+            "isChipAuthentic": self.isAuthentic(status: passport.chipAuthenticationStatus),
+            "isDocumentAuthentic": passport.documentSigningCertificateVerified
+              && passport.passportDataNotTampered,
           ]
 
           if includeImages ?? false {
@@ -119,6 +124,10 @@ class NfcPassportReader: NSObject {
     } else {
       reject("ERROR_INVALID_BACK_KEY", "Invalid bac key", nil)
     }
+  }
+
+  func isAuthentic(status: PassportAuthenticationStatus) -> Bool {
+    return status == .success
   }
 
   func handleProgress(percentualProgress: Int) -> String {
