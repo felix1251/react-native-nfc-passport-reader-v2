@@ -125,7 +125,7 @@ class NfcPassportReader(context: Context) {
       if (images.isNotEmpty()) {
         val sigImageInfo = images.iterator().next()
         val image = bitmapUtil.getImage(sigImageInfo)
-        nfcResult.originalFacePhoto = image
+        nfcResult.signaturePhoto = image
       }
     }
 
