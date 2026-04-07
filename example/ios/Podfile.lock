@@ -887,7 +887,7 @@ PODS:
   - React-Mapbuffer (0.73.6):
     - glog
     - React-debug
-  - react-native-nfc-passport-reader (0.2.5):
+  - react-native-nfc-passport-reader-v2 (1.0.10):
     - glog
     - OpenSSL-Universal (~> 1.1.1900)
     - RCT-Folly (= 2022.05.16.00)
@@ -1093,7 +1093,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector-modern`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
-  - react-native-nfc-passport-reader (from `../..`)
+  - react-native-nfc-passport-reader-v2 (from `../..`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1179,7 +1179,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
-  react-native-nfc-passport-reader:
+  react-native-nfc-passport-reader-v2:
     :path: "../.."
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
@@ -1255,7 +1255,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 85583ef014ce53d731a98c66a0e24496f7a83066
   React-logger: 55764cd993880c6f887505854581c9faf68feff2
   React-Mapbuffer: 15dfcfeb4428d8799cce75e7fe85b18b706029e0
-  react-native-nfc-passport-reader: ed274e10cc9daa9ed661ba8576b136a21cffddd7
+  react-native-nfc-passport-reader-v2: 9ef0faaa64cb95357eb2b533ada336c62c1fbe83
   React-nativeconfig: b4d4e9901d4cabb57be63053fd2aa6086eb3c85f
   React-NativeModulesApple: 541d64309a3037060cc416db5c8a63ee5884048e
   React-perflogger: 5f49905de275bac07ac7ea7f575a70611fa988f2
@@ -1281,4 +1281,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 689c77c759a52a444b273e1663a4d3db9bfcb158
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.14.3

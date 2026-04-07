@@ -79,3 +79,5 @@ lib/
 
 # npm pack
 *.tgz
+*.local
+*.lock

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import NfcPassportReader, {
   type NfcResult,
-} from 'react-native-nfc-passport-reader';
+} from 'react-native-nfc-passport-reader-v2';
 
 export default function App() {
   const [result, setResult] = React.useState<NfcResult>();
