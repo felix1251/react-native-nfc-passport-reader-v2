@@ -101,6 +101,7 @@ class NfcPassportReader(context: Context) {
       nfcResult.documentNo = it.documentNumber
       nfcResult.nationality = it.nationality
       nfcResult.mrz = it.toString()
+      nfcResult.issuingAuthority = it.issuingState
     }
 
     if (includeImages) {
@@ -114,7 +115,7 @@ class NfcPassportReader(context: Context) {
       if (allFaceImageInfos.isNotEmpty()) {
         val faceImageInfo = allFaceImageInfos.iterator().next()
         val image = bitmapUtil.getImage(faceImageInfo)
-        nfcResult.originalFacePhoto = image
+        nfcResult.facePhoto = image
       }
 
       val dg7In = service.getInputStream(PassportService.EF_DG7)

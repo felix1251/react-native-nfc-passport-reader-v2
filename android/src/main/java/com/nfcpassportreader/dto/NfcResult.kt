@@ -11,6 +11,7 @@ data class NfcResult(
   var lastName: String? = null,
   var mrz: String? = null,
   var nationality: String? = null,
-  var originalFacePhoto: NfcImage? = null,
+  var issuingAuthority: String? = null,
+  var facePhoto: NfcImage? = null,
   var signaturePhoto: NfcImage? = null,
 )
