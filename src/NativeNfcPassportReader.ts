@@ -24,12 +24,16 @@ export type NfcResult = {
   nationality: string;
   facePhoto?: string; // base64
   signaturePhoto?: string; // base64
+  // TODO: support on android
   documentType: string;
   documentSubType?: string;
   ldsVersion: string;
   // verifications
-  isChipAuthentic: boolean;
-  isDocumentAuthentic: boolean;
+  chipAuthSupported: boolean;
+  chipAuthStatus: 'notDone' | 'success' | 'failed';
+  activeAuthSupported: boolean;
+  activeAuthPassed: boolean; // Ignore if activeAuthSupported is false
+  documentAuthentic: boolean;
 };
 
 export interface Spec extends TurboModule {
