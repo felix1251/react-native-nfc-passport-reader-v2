@@ -52,7 +52,7 @@ class NfcPassportReader: NSObject {
 
       let mrzKey = passportUtil.getMRZKey()
 
-      var tags: [DataGroupId] = [.COM, .DG1, .DG11]
+      var tags: [DataGroupId] = [.COM, .SOD, .DG1, .DG11, .DG14, .DG15]
 
       if includeImages ?? false {
         tags += [.DG2, .DG7]
@@ -97,8 +97,11 @@ class NfcPassportReader: NSObject {
             "nationality": passport.nationality,
             "documentType": passport.documentType,
             "ldsVersion": passport.LDSVersion,
-            "isChipAuthentic": self.isAuthentic(status: passport.chipAuthenticationStatus),
-            "isDocumentAuthentic": passport.documentSigningCertificateVerified
+            "chipAuthSupported": passport.isChipAuthenticationSupported,
+            "chipAuthStatus": passport.chipAuthenticationStatus,
+            "activeAuthSupported": passport.activeAuthenticationSupported,
+            "activeAuthPassed": passport.activeAuthenticationPassed,
+            "documentAuthentic": passport.documentSigningCertificateVerified
               && passport.passportDataNotTampered,
           ]
 
